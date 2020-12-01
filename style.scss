@@ -38,9 +38,9 @@ body {
             color: white;
             font-weight: bold;
 
-            // &:hover {
-            //     background-color: rgb(56, 121, 37);
-            // }
+            &:hover {
+                background-color: rgb(218, 5, 23);
+            }
         }
     }
 
@@ -94,5 +94,37 @@ body {
         width: 200px;
         border-radius: 2px;
         display: none;
+    }
+}
+
+.test {
+    text-align: center;
+    width: 400px;
+    padding: 30px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+
+    img {
+        margin-top: 10px;
+        width: 150px;
+        height: 150px;
+    }
+
+    button {
+        cursor: pointer;
+        outline: none;
+        border: 1px solid rgb(196, 187, 187);
+        color: white;
+        font-weight: bold;
+        width: 100px;
+        height: 30px;
+        border-radius: 4px;
+        background-color: green;
     }
 }

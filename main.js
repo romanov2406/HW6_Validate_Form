@@ -37,6 +37,13 @@ let validateField = (regExp, input, selector) => {
     }
 };
 
+function zurueck() {
+    test.style.display = 'none';
+    document.querySelector('.content').style.display = 'block';
+
+
+}
+
 function createAndPush(id, name, surrname, email, password) {
     const newMark = new User(id, name, surrname, email, password);
     allUsers.push(newMark);
@@ -82,13 +89,14 @@ signIn.addEventListener('click', function () {
     allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
     const email = form2.email.value;
     const password = form2.password.value;
-    
+
     if (email && password) {
         const user = allUsers.find(elem => elem.email === email && elem.password === password);
 
         if (user) {
-            test.innerHTML = `${user.name}-${user.surrname}<br/>${user.email}`;
+            test.innerHTML = `<img class="img" src="https://i.dlpng.com/static/png/6728153_preview.png" alt=""><h1>${user.name} ${user.surrname}</h1><p>${user.email}</p><h4>Designer and Web Dev</h4><button id="checkOut" onclick="zurueck()">Sign Up</button>`;
             document.querySelector('.content').style.display = 'none';
+            test.style.display = 'block'
             form2.reset();
         } else {
             alert('Email or password is incorrect');
